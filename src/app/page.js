@@ -20,7 +20,9 @@ const Home = async () => {
   const urlImage = tvShow.data.APP_DOMAIN_CDN_IMAGE;
 
   return (
+
     <div>
+      <h1> ĐÃ CHUYỂN TRANG WEB SANG TÊN MIỀN <a href="https://vudo.id.vn/" target="_blank" >https://vudo.id.vn/</a> </h1>
       <>
         {/* PHIM MỚI NHẤT */}
         <DanhMucPhim movies={newMovie.items} domain="" categoryTitle="PHIM MỚI NHẤT" />
