@@ -7,10 +7,10 @@ const AppHeader = () => {
      return (
           <nav className="navbar navbar-expand-lg fixed-top">
                <div className="container">
-                    <Link className="navbar-brand me-auto text-warning fw" href="/">Vudo</Link>
+                    <Link className="navbar-brand me-auto text-warning fw" href="/">Kho Phim Moi</Link>
                     <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                          <div className="offcanvas-header">
-                              <h5 className="offcanvas-title text-warning fw" id="offcanvasNavbarLabel">Vudo</h5>
+                              <h5 className="offcanvas-title text-warning fw" id="offcanvasNavbarLabel">Kho Phim Moi</h5>
                               <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" />
                          </div>
                          <div className="offcanvas-body">
@@ -54,7 +54,7 @@ const AppHeader = () => {
                                              Năm
                                         </a>
                                         <ul className="dropdown-menu">
-                                             <li><a className="dropdown-item" href="/nam/2024">2024</a></li>
+                                             <li><a className="dropdown-item" href="/nam/2025">2025</a></li>
                                         </ul>
                                    </li>
                               </ul>
