@@ -37,13 +37,14 @@ const info = (data) => {
                                    <div className="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
                                         <div className="row p-3">
                                              <ul className="text-warning">
-                                                  <li><p><strong>Tên phim : </strong></p><p>{movie.name}</p></li>
+                                                  <li><p><strong>Tên phim : </strong></p><p><strong>{movie.name}</strong></p></li>
                                                   <li><p><strong>Tên chính thức : </strong>{movie.origin_name}</p></li>
                                                   <li><p><strong>Trạng thái : </strong>{movie.episode_current}</p></li>
                                                   <li><p><strong>Tổng số tập : </strong>{movie.episode_total}</p></li>
                                                   <li><p><strong>Chất Lượng : </strong>{movie.quality}</p></li>
                                                   <li><p><strong>Năm : </strong>{movie.year}</p></li>
                                                   <li><p><strong>Ngôn Ngữ : </strong>{movie.lang}</p></li>
+                                                  <li><p><strong>Quốc gia: </strong>{movie.quoc_gia}</p></li>
                                                   <li><p><strong>Đạo diễn : </strong>{movie.director.join(",")}</p></li>
                                                   <li><p><strong>Diễn viên : </strong>{movie.actor.join(", ")}</p></li>
                                                   <li><p><strong>Thời lượng : </strong>{movie.time}</p></li>
