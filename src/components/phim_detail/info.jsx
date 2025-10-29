@@ -35,18 +35,19 @@ const info = (data) => {
                               </ul>
                               <div className="tab-content" id="ex2-content">
                                    <div className="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
+                                        <h2 class="g1-delta g1-delta-2nd"><span>Thông tin phim</span></h2>
                                         <div className="row p-3">
+                                             <p><strong>{movie.name}</strong></p>
                                              <ul className="text-warning">
-                                                  <li><p><strong>Tên phim : </strong></p><p><strong>{movie.name}</strong></p></li>
                                                   <li><p><strong>Tên chính thức : </strong>{movie.origin_name}</p></li>
                                                   <li><p><strong>Trạng thái : </strong>{movie.episode_current}</p></li>
                                                   <li><p><strong>Tổng số tập : </strong>{movie.episode_total}</p></li>
                                                   <li><p><strong>Chất Lượng : </strong>{movie.quality}</p></li>
                                                   <li><p><strong>Năm : </strong>{movie.year}</p></li>
                                                   <li><p><strong>Ngôn Ngữ : </strong>{movie.lang}</p></li>
-                                                  <li><p><strong>Quốc gia: </strong>{movie.quoc_gia}</p></li>
+                                                  <li><p><strong>Quốc gia: </strong>{movie.Quoc_Gia}</p></li>
                                                   <li><p><strong>Đạo diễn : </strong>{movie.director.join(",")}</p></li>
-                                                  <li><p><strong>Diễn viên : </strong>{movie.actor.join(", ")}</p></li>
+                                                  <li><p><strong>Diễn viên : </strong><a className="tag">{movie.actor.join(", ")}</a></p></li>
                                                   <li><p><strong>Thời lượng : </strong>{movie.time}</p></li>
                                                   <li><p><strong>Ngày tạo : </strong>{new Date(movie.created.time).toLocaleDateString()}</p></li>
                                              </ul>
@@ -55,7 +56,7 @@ const info = (data) => {
                                              {episodes.map((episode, index) => (
                                                   <div key={index} className="text-center mt-3">
                                                        {episode.server_data.slice(0, 1).map((ep, i) => (
-                                                            <Link key={i} href={`/xem-phim/${movie.slug}/${ep.slug}?server=${encodeURIComponent(episode.server_name)}`} className="btn btn-warning me-3">
+                                                            <Link key={i} href={`/xem-phim/${movie.slug}/${ep.slug}?server=${encodeURIComponent(episode.server_name)}`} target="_blank" className="btn btn-warning me-3">
                                                                  Xem ngay
                                                             </Link>
                                                        ))}
@@ -66,16 +67,18 @@ const info = (data) => {
                                    </div>
                                    <div className="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
                                         <div className="p-3">
+                                             <h2 class="g1-delta g1-delta-2nd"><span>Nội dung phim</span></h2>
                                              <p className="text-warning">{movie.content}</p>
                                         </div>
                                    </div>
                                    <div className="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
                                         <div className="p-3">
+                                             <h2 class="g1-delta g1-delta-2nd"><span>Xem các tập phim</span></h2>
                                              {episodes.map((episode, index) => (
                                                   <div key={index}>
                                                        <div className="text-warning"><strong>Server: </strong>{episode.server_name}</div>
                                                        {episode.server_data.map((ep, i) => (
-                                                            <Link key={i} href={`/xem-phim/${movie.slug}/${ep.slug}?server=${encodeURIComponent(episode.server_name)}`} className="btn btn-secondary btn-sm mt-2 me-2">
+                                                            <Link key={i} href={`/xem-phim/${movie.slug}/${ep.slug}?server=${encodeURIComponent(episode.server_name)}`} target="_blank" className="btn btn-secondary btn-sm mt-2 me-2">
                                                                  {ep.name}
                                                             </Link>
                                                        ))}
