@@ -36,14 +36,13 @@ const info = (data) => {
                               <div className="tab-content" id="ex2-content">
                                    <div className="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
                                         <div className="row p-3">
-                                             <ul className="text-warning col-6">
+                                             <ul className="text-warning">
                                                   <li><p><strong>Tên phim : </strong>{movie.name}</p></li>
                                                   <li><p><strong>Tên chính thức : </strong>{movie.origin_name}</p></li>
                                                   <li><p><strong>Trạng thái : </strong>{movie.episode_current}</p></li>
                                                   <li><p><strong>Tổng số tập : </strong>{movie.episode_total}</p></li>
                                                   <li><p><strong>Chất Lượng : </strong>{movie.quality}</p></li>
-                                             </ul>
-                                             <ul className="text-warning col-6">
+                                                  <li><p><strong>Năm : </strong>{movie.year}</p></li>
                                                   <li><p><strong>Ngôn Ngữ : </strong>{movie.lang}</p></li>
                                                   <li><p><strong>Đạo diễn : </strong>{movie.director.join(",")}</p></li>
                                                   <li><p><strong>Diễn viên : </strong>{movie.actor.join(", ")}</p></li>
@@ -60,7 +59,6 @@ const info = (data) => {
                                                             </Link>
                                                        ))}
                                                        <Link href={movie.trailer_url} target="_blank" className="btn btn-danger me-3" >Xem trailer</Link>
-                                                       <button onClick={() => alert('Đang làm!')} target="_blank" className="btn btn-success" >Lấy API</button>
                                                   </div>
                                              ))}
                                         </div>
