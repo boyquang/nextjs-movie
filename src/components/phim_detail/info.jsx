@@ -78,7 +78,7 @@ const info = (data) => {
                                                   <div key={index}>
                                                        <div className="text-warning"><strong>Server: </strong>{episode.server_name}</div>
                                                        {episode.server_data.map((ep, i) => (
-                                                            <Link key={i} href={`/xem-phim/${movie.slug}/${ep.slug}?server=${encodeURIComponent(episode.server_name)}`} target="_blank" className="btn btn-secondary btn-sm mt-2 me-2">
+                                                            <Link key={i} href={`/xem-phim/${movie.slug}/${ep.slug}?server=${encodeURIComponent(episode.server_name)}`} target="_blank" className="btn btn-secondary btn-sm mt-2 me-2 me-3 mb-3">
                                                                  {ep.name}
                                                             </Link>
                                                        ))}
