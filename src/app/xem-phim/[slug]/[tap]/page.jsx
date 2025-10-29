@@ -60,8 +60,8 @@ function XemPhim({ params }) {
                     <div className="card-header">
                          <nav aria-label="breadcrumb text-start">
                               <ol className="breadcrumb justify-content-start">
-                                   <li className="breadcrumb-item"><a href="/" className="text-warning fw">Trang chủ</a></li>
-                                   <li className="breadcrumb-item"><Link href={`/phim/${movie.slug}`} className="text-warning fw">{movie.name}</Link></li>
+                                   <li className="breadcrumb-item"><a className="text-warning fw">Trang chủ</a></li>
+                                   <li className="breadcrumb-item">{movie.name}</li>
                                    <li className="breadcrumb-item active" aria-current="page">{currentTap}</li>
                               </ol>
                          </nav>
@@ -97,7 +97,7 @@ function XemPhim({ params }) {
 
                          <div className="mb-4">
                               <div className="text-warning fw mb-2">
-                                   <strong><i className="fe fe-hash"></i>Các tập phim</strong>
+                                   <strong><i className="fe fe-hash"></i>Xem các tập phim</strong>
                               </div>
                               <div>
                                    {episodes.map((item, index) => (
